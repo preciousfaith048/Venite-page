@@ -98,86 +98,86 @@ export default function Contact() {
       </section>
 
       {/* 2. CONTACT DETAILS & FORM */}
-      <section id="contact-details-form" className="py-24 bg-white relative">
+      <section id="contact-details-form" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Contact Information & Map Column */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-4">
-                <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+                <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
                   Find Us
                 </span>
-                <h2 className="font-sans font-bold text-3xl text-slate-900 leading-tight">
+                <h2 className="font-sans font-bold text-3xl text-slate-900 dark:text-white leading-tight">
                   University Contact Details
                 </h2>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                   We are here to assist with any admissions requests, academic syllabus questions, or career support details. Reach out through our physical offices, telephone lines, or direct emails.
                 </p>
               </div>
 
               {/* Detail Items */}
-              <div className="space-y-6 bg-slate-50 border border-slate-100 rounded-2xl p-6">
+              <div className="space-y-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl p-6 transition-colors duration-300">
                 {/* Address */}
                 <div className="flex items-start space-x-4">
-                  <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
                     <LucideIcon name="MapPin" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-slate-900 text-sm md:text-base">Campus Address</h4>
-                    <p className="text-slate-500 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.address}</p>
+                    <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm md:text-base font-semibold">Campus Address</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.address}</p>
                   </div>
                 </div>
 
                 {/* Phones */}
                 <div className="flex items-start space-x-4">
-                  <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
                     <LucideIcon name="Phone" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-slate-900 text-sm md:text-base">Admissions Hotline</h4>
-                    <p className="text-slate-500 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.phone}</p>
+                    <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm md:text-base font-semibold">Admissions Hotline</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.phone}</p>
                   </div>
                 </div>
 
                 {/* Emails */}
                 <div className="flex items-start space-x-4">
-                  <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
                     <LucideIcon name="Mail" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-slate-900 text-sm md:text-base">Support Email</h4>
-                    <p className="text-slate-500 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.email}</p>
+                    <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm md:text-base font-semibold">Support Email</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.email}</p>
                   </div>
                 </div>
 
                 {/* Office Hours */}
                 <div className="flex items-start space-x-4">
-                  <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
                     <LucideIcon name="Clock" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-sans font-bold text-slate-900 text-sm md:text-base">Office Working Hours</h4>
-                    <p className="text-slate-500 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.officeHours}</p>
+                    <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm md:text-base font-semibold">Office Working Hours</h4>
+                    <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-1 leading-relaxed">{contactDetails.officeHours}</p>
                   </div>
                 </div>
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-slate-100 rounded-3xl h-64 overflow-hidden border border-slate-200 shadow-inner relative flex flex-col items-center justify-center text-center p-6">
-                <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#2563eb_1.5px,transparent_1.5px)] [background-size:24px_24px] pointer-events-none" />
+              <div className="bg-slate-100 dark:bg-slate-950 rounded-3xl h-64 overflow-hidden border border-slate-200 dark:border-slate-800 shadow-inner relative flex flex-col items-center justify-center text-center p-6 transition-colors duration-300">
+                <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#2563eb_1.5px,transparent_1.5px)] dark:bg-[radial-gradient(#0284c7_1.5px,transparent_1.5px)] [background-size:24px_24px] pointer-events-none" />
                 <div className="relative z-10 space-y-2">
-                  <div className="mx-auto h-12 w-12 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shadow">
+                  <div className="mx-auto h-12 w-12 rounded-full bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center text-brand-600 dark:text-brand-400 shadow">
                     <LucideIcon name="Building" size={24} />
                   </div>
-                  <h4 className="font-sans font-bold text-slate-900 text-sm">Interactive Campus Map</h4>
-                  <p className="text-slate-500 text-xs max-w-xs leading-relaxed">
+                  <h4 className="font-sans font-bold text-slate-900 dark:text-white text-sm">Interactive Campus Map</h4>
+                  <p className="text-slate-500 dark:text-slate-400 text-xs max-w-xs leading-relaxed">
                     Venite Main Campus, Academic Heights, Block B, Main Hall.
                   </p>
                   <a
                     href="https://maps.google.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-block text-xs font-semibold text-brand-700 hover:text-brand-800 underline mt-1"
+                    className="inline-block text-xs font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 underline mt-1"
                   >
                     Open in Google Maps
                   </a>
@@ -186,8 +186,8 @@ export default function Contact() {
             </div>
 
             {/* Contact Form Column */}
-            <div className="lg:col-span-7 bg-slate-50 border border-slate-100/80 rounded-3xl p-8 md:p-10 shadow-sm">
-              <h3 className="font-sans font-bold text-slate-900 text-xl md:text-2xl mb-6">
+            <div className="lg:col-span-7 bg-slate-50 dark:bg-slate-950 border border-slate-100/80 dark:border-slate-850 rounded-3xl p-8 md:p-10 shadow-sm transition-colors duration-300">
+              <h3 className="font-sans font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-6">
                 Send Direct Message
               </h3>
 
@@ -195,14 +195,14 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="mb-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-800 text-sm flex items-start space-x-3"
+                  className="mb-6 p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-800/20 text-emerald-800 dark:text-emerald-300 text-sm flex items-start space-x-3"
                 >
-                  <div className="mt-0.5 shrink-0 text-emerald-600">
+                  <div className="mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-400">
                     <LucideIcon name="CheckCircle2" size={20} />
                   </div>
                   <div>
                     <h5 className="font-bold">Message Delivered successfully!</h5>
-                    <p className="text-emerald-700 text-xs mt-1 leading-relaxed">
+                    <p className="text-emerald-700 dark:text-emerald-400 text-xs mt-1 leading-relaxed">
                       Thank you for contacting Venite University. An academic secretary will review your subject line and dispatch a customized reply to your mailbox within 24 working hours.
                     </p>
                   </div>
@@ -213,7 +213,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">
                       Full Name
                     </label>
                     <input
@@ -222,8 +222,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.name ? 'border-red-500 bg-red-50/20' : 'border-slate-200'
-                      } bg-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
+                        errors.name ? 'border-red-500 bg-red-500/10' : 'border-slate-200 dark:border-slate-800'
+                      } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
                       placeholder="Jane Austin"
                     />
                     {errors.name && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.name}</p>}
@@ -231,7 +231,7 @@ export default function Contact() {
 
                   {/* Email */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">
                       Email Address
                     </label>
                     <input
@@ -240,8 +240,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.email ? 'border-red-500 bg-red-50/20' : 'border-slate-200'
-                      } bg-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
+                        errors.email ? 'border-red-500 bg-red-500/10' : 'border-slate-200 dark:border-slate-800'
+                      } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
                       placeholder="jane@example.com"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.email}</p>}
@@ -251,7 +251,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Phone */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -260,8 +260,8 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.phone ? 'border-red-500 bg-red-50/20' : 'border-slate-200'
-                      } bg-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
+                        errors.phone ? 'border-red-500 bg-red-500/10' : 'border-slate-200 dark:border-slate-800'
+                      } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
                       placeholder="+1 (555) 987-6543"
                     />
                     {errors.phone && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.phone}</p>}
@@ -269,7 +269,7 @@ export default function Contact() {
 
                   {/* Subject */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">
                       Subject Matter
                     </label>
                     <input
@@ -278,8 +278,8 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.subject ? 'border-red-500 bg-red-50/20' : 'border-slate-200'
-                      } bg-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
+                        errors.subject ? 'border-red-500 bg-red-500/10' : 'border-slate-200 dark:border-slate-800'
+                      } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
                       placeholder="e.g. Admission Inquiry"
                     />
                     {errors.subject && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.subject}</p>}
@@ -288,7 +288,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-2">
                     Message Body
                   </label>
                   <textarea
@@ -297,8 +297,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.message ? 'border-red-500 bg-red-50/20' : 'border-slate-200'
-                    } bg-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
+                      errors.message ? 'border-red-500 bg-red-500/10' : 'border-slate-200 dark:border-slate-800'
+                    } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm`}
                     placeholder="Write your message here in detail..."
                   />
                   {errors.message && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.message}</p>}
@@ -335,16 +335,16 @@ export default function Contact() {
       </section>
 
       {/* 3. FREQUENTLY ASKED QUESTIONS (FAQ Accordion) */}
-      <section id="contact-faqs" className="py-24 bg-slate-50 border-y border-slate-100 relative">
+      <section id="contact-faqs" className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/85 relative transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
               Direct Answers
             </span>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
               Frequently Asked Questions
             </h2>
-            <p className="text-slate-600 text-sm mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm mt-3">
               Browse our standardized collegiate FAQs. If you do not locate your specific query, submit the direct message form above.
             </p>
           </div>
@@ -356,18 +356,18 @@ export default function Contact() {
                 <div
                   id={`faq-item-${faq.id}`}
                   key={faq.id}
-                  className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-xs transition-all duration-300"
+                  className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-xs transition-all duration-300"
                 >
                   <button
                     id={`faq-trigger-${faq.id}`}
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left p-6 flex items-center justify-between font-sans font-bold text-slate-900 text-base md:text-lg focus:outline-none cursor-pointer"
+                    className="w-full text-left p-6 flex items-center justify-between font-sans font-bold text-slate-900 dark:text-white text-base md:text-lg focus:outline-none cursor-pointer"
                   >
                     <span>{faq.question}</span>
                     <LucideIcon
                       name={isOpen ? 'ChevronUp' : 'ChevronDown'}
                       size={20}
-                      className="text-brand-600 ml-4 shrink-0"
+                      className="text-brand-600 dark:text-brand-400 ml-4 shrink-0"
                     />
                   </button>
 
@@ -379,7 +379,7 @@ export default function Contact() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                       >
-                        <div className="px-6 pb-6 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                        <div className="px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed border-t border-slate-50 dark:border-slate-800">
                           {faq.answer}
                         </div>
                       </motion.div>

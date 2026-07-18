@@ -24,18 +24,18 @@ export default function About() {
       </section>
 
       {/* 2. HISTORY, MISSION, VISION */}
-      <section id="university-overview" className="py-24 bg-white relative">
+      <section id="university-overview" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* History Column */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
                 Founding Legacy
               </span>
-              <h2 className="font-sans font-bold text-3xl text-slate-900 leading-tight">
+              <h2 className="font-sans font-bold text-3xl text-slate-900 dark:text-white leading-tight">
                 Our Rich Scholastic Journey
               </h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
+              <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm md:text-base">
                 <p>
                   Founded in 1982, Venite University began as an elite institute of advanced computing and mechanical sciences. Over the subsequent four decades, the institution expanded into six globally recognized colleges covering Medicine, Law, Business, Engineering, and the liberal arts.
                 </p>
@@ -45,8 +45,8 @@ export default function About() {
               </div>
 
               {/* Core Values Box */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <h3 className="font-sans font-bold text-slate-900 text-lg mb-4">
+              <div className="bg-slate-50 dark:bg-slate-950 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 transition-colors duration-300">
+                <h3 className="font-sans font-bold text-slate-900 dark:text-white text-lg mb-4">
                   Our Founding Core Values
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -55,9 +55,9 @@ export default function About() {
                     { title: 'Leadership', desc: 'Steering global futures' },
                     { title: 'Excellence', desc: 'Highest educational rigor' },
                   ].map((val) => (
-                    <div key={val.title} className="text-center bg-white p-4 rounded-xl border border-slate-100/50 shadow-xs">
-                      <h4 className="font-sans font-bold text-brand-700 text-sm md:text-base">{val.title}</h4>
-                      <p className="text-slate-500 text-[11px] mt-1">{val.desc}</p>
+                    <div key={val.title} className="text-center bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100/50 dark:border-slate-800 shadow-xs">
+                      <h4 className="font-sans font-bold text-brand-600 dark:text-brand-400 text-sm md:text-base">{val.title}</h4>
+                      <p className="text-slate-500 dark:text-slate-400 text-[11px] mt-1">{val.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -103,16 +103,16 @@ export default function About() {
       </section>
 
       {/* 3. WHY CHOOSE VENITE - ADVANTAGES */}
-      <section id="about-advantages" className="py-24 bg-slate-50 border-y border-slate-100 relative">
+      <section id="about-advantages" className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/80 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
               University Advantages
             </span>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
               Why Students Choose Venite
             </h2>
-            <p className="text-slate-600 text-sm md:text-base mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-3">
               We provide the tools, support systems, and top-tier faculties to translate your intellectual potential into immediate corporate or entrepreneurial excellence.
             </p>
           </div>
@@ -126,13 +126,13 @@ export default function About() {
               { title: 'Generous Scholarship Portals', desc: 'Over $5M distributed every session based on academic performance, sports milestones, and financial need benchmarks.', icon: 'Award' },
               { title: 'Dedicated Student Welfare', desc: 'On-demand mental counselors, diagnostic centers, biometric secure hostels, and highly personalized academic coaching desks.', icon: 'HeartPulse' }
             ].map((adv, idx) => (
-              <div key={idx} className="bg-white border border-slate-100 p-6 rounded-2xl flex items-start space-x-4 shadow-xs">
-                <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+              <div key={idx} className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-2xl flex items-start space-x-4 shadow-xs">
+                <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
                   <LucideIcon name={adv.icon} size={20} />
                 </div>
                 <div>
-                  <h3 className="font-sans font-bold text-slate-900 text-base md:text-lg">{adv.title}</h3>
-                  <p className="text-slate-500 text-sm mt-1 leading-relaxed">{adv.desc}</p>
+                  <h3 className="font-sans font-bold text-slate-900 dark:text-white text-base md:text-lg">{adv.title}</h3>
+                  <p className="text-slate-500 dark:text-slate-300 text-sm mt-1 leading-relaxed">{adv.desc}</p>
                 </div>
               </div>
             ))}
@@ -141,58 +141,58 @@ export default function About() {
       </section>
 
       {/* 4. WEBSITE DEVELOPMENT TIMELINE */}
-      <section id="dev-process-timeline" className="py-24 bg-white relative">
+      <section id="dev-process-timeline" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
               Digital Infrastructure
             </span>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
               Website Development Process
             </h2>
-            <p className="text-slate-600 text-sm md:text-base mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-3">
               This digital platform was engineered using robust enterprise software planning, rigorous UI/UX drafting, clean programming standards, and cross-device validation.
             </p>
           </div>
 
           {/* Interactive Chronological Timeline */}
-          <div className="relative border-l-2 border-slate-100 ml-4 md:ml-32 space-y-12">
+          <div className="relative border-l-2 border-slate-100 dark:border-slate-800 ml-4 md:ml-32 space-y-12">
             {timelineSteps.map((step) => (
               <div key={step.step} className="relative group">
                 {/* Left Side Label (desktop only) */}
                 <div className="absolute right-full mr-12 top-0 hidden md:block text-right w-24">
-                  <span className="font-mono text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-lg uppercase tracking-wider">
+                  <span className="font-mono text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40 px-2.5 py-1 rounded-lg uppercase tracking-wider">
                     Step 0{step.step}
                   </span>
                 </div>
 
                 {/* Timeline Node Dot */}
-                <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-white bg-brand-600 shadow-[0_0_10px_rgba(2,132,199,0.6)] group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300" />
+                <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-white dark:border-slate-800 bg-brand-600 shadow-[0_0_10px_rgba(37,99,235,0.6)] group-hover:bg-brand-500 group-hover:scale-125 transition-all duration-300" />
 
                 {/* Content Card (Glassmorphic look) */}
-                <div className="ml-8 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 hover:shadow-md transition-all duration-300">
+                <div className="ml-8 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl p-6 md:p-8 hover:shadow-md transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="h-10 w-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                      <div className="h-10 w-10 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
                         <LucideIcon name={step.iconName} size={20} />
                       </div>
                       <div>
-                        <h3 className="font-sans font-bold text-slate-900 text-lg md:text-xl leading-tight">
+                        <h3 className="font-sans font-bold text-slate-900 dark:text-white text-lg md:text-xl leading-tight">
                           {step.title}
                         </h3>
-                        <p className="text-slate-500 text-xs mt-0.5">{step.subtitle}</p>
+                        <p className="text-slate-500 dark:text-slate-400 text-xs mt-0.5">{step.subtitle}</p>
                       </div>
                     </div>
                     {/* Step label on mobile */}
-                    <span className="inline-block md:hidden self-start font-mono text-[10px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded uppercase">
+                    <span className="inline-block md:hidden self-start font-mono text-[10px] font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/40 px-2 py-0.5 rounded uppercase">
                       Step 0{step.step}
                     </span>
                   </div>
 
-                  <ul className="space-y-2 text-sm text-slate-600">
+                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
                     {step.details.map((detail, dIdx) => (
                       <li key={dIdx} className="flex items-start space-x-2">
-                        <LucideIcon name="Check" size={14} className="text-brand-600 mt-1 shrink-0" />
+                        <LucideIcon name="Check" size={14} className="text-brand-600 dark:text-brand-400 mt-1 shrink-0" />
                         <span>{detail}</span>
                       </li>
                     ))}

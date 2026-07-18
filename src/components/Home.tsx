@@ -135,18 +135,18 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
       </section>
 
       {/* 2. ABOUT PREVIEW & STATS SECTION */}
-      <section id="about-preview" className="py-24 bg-white relative">
+      <section id="about-preview" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Visual Frame */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
                 Why Choose Venite
               </span>
-              <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 leading-tight">
+              <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white leading-tight">
                 Pioneering the Next Century of Leadership
               </h2>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 Venite University stands at the forefront of global education, combining rigorous academic paradigms with hands-on, real-world application in state-of-the-art incubation sandboxes.
               </p>
               <div className="space-y-3 pt-2">
@@ -156,8 +156,8 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                   'World-Class Research Grants and Labs',
                   'Guaranteed Global Career Placements',
                 ].map((item) => (
-                  <div key={item} className="flex items-start space-x-3 text-slate-700">
-                    <div className="mt-1 h-5 w-5 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                  <div key={item} className="flex items-start space-x-3 text-slate-700 dark:text-slate-300">
+                    <div className="mt-1 h-5 w-5 rounded-full bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center text-brand-600 dark:text-brand-400">
                       <LucideIcon name="Check" size={14} />
                     </div>
                     <span className="text-sm font-medium">{item}</span>
@@ -167,7 +167,7 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
               <button
                 id="about-learn-more-btn"
                 onClick={() => onPageChange('about')}
-                className="mt-6 inline-flex items-center space-x-2 text-brand-700 hover:text-brand-800 font-bold transition-all duration-300 cursor-pointer group"
+                className="mt-6 inline-flex items-center space-x-2 text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 font-bold transition-all duration-300 cursor-pointer group"
               >
                 <span>Read Our Mission & Vision</span>
                 <LucideIcon name="ArrowRight" className="h-4.5 w-4.5 group-hover:translate-x-1 transition-transform" />
@@ -175,18 +175,18 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
             </div>
 
             {/* Statistics Dashboard */}
-            <div className="lg:col-span-7 bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-brand-50/50 blur-3xl pointer-events-none" />
+            <div className="lg:col-span-7 bg-slate-50 dark:bg-slate-950 rounded-3xl p-8 md:p-12 border border-slate-100 dark:border-slate-800 shadow-sm relative overflow-hidden transition-colors duration-300">
+              <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-brand-50/50 dark:bg-brand-900/10 blur-3xl pointer-events-none" />
               <div className="grid grid-cols-2 gap-8 md:gap-12 relative z-10">
                 {stats.map((stat) => (
                   <div key={stat.id} className="text-center md:text-left">
-                    <div className="font-sans font-extrabold text-4xl md:text-5xl text-brand-800 tracking-tight flex justify-center md:justify-start items-baseline">
+                    <div className="font-sans font-extrabold text-4xl md:text-5xl text-brand-600 dark:text-brand-400 tracking-tight flex justify-center md:justify-start items-baseline">
                       <Counter value={stat.value} suffix={stat.suffix} />
                     </div>
-                    <h3 className="font-sans text-sm md:text-base font-bold text-slate-800 mt-2">
+                    <h3 className="font-sans text-sm md:text-base font-bold text-slate-800 dark:text-slate-200 mt-2">
                       {stat.label}
                     </h3>
-                    <p className="text-xs text-slate-500 mt-1">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                       Academic audit certified 2026.
                     </p>
                   </div>
@@ -198,16 +198,16 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
       </section>
 
       {/* 3. FEATURED FACULTIES */}
-      <section id="featured-faculties" className="py-24 bg-slate-50 border-y border-slate-100 relative">
+      <section id="featured-faculties" className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/80 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
               Academic Divisions
             </span>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
               Featured Faculties
             </h2>
-            <p className="text-slate-600 text-sm md:text-base mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-3">
               Explore our core colleges led by industry visionaries and decorated research fellows. Choose your path to greatness today.
             </p>
           </div>
@@ -217,16 +217,16 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
               <div
                 id={`faculty-card-${fac.id}`}
                 key={fac.id}
-                className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl p-6 md:p-8 hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div className="space-y-4">
-                  <div className="h-12 w-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                  <div className="h-12 w-12 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white dark:group-hover:bg-brand-500 transition-all duration-300">
                     <LucideIcon name={fac.iconName} size={24} />
                   </div>
-                  <h3 className="font-sans font-bold text-xl text-slate-900">
+                  <h3 className="font-sans font-bold text-xl text-slate-900 dark:text-white">
                     {fac.name}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                     {fac.description}
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                   <button
                     id={`faculty-learn-more-${fac.id}`}
                     onClick={() => onPageChange('programmes')}
-                    className="inline-flex items-center space-x-1 text-sm font-semibold text-brand-700 hover:text-brand-800 transition-colors group cursor-pointer"
+                    className="inline-flex items-center space-x-1 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors group cursor-pointer"
                   >
                     <span>View Courses</span>
                     <LucideIcon name="ArrowRight" size={14} className="group-hover:translate-x-0.5 transition-transform" />
@@ -247,16 +247,16 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
       </section>
 
       {/* 4. CAMPUS LIFE */}
-      <section id="campus-life" className="py-24 bg-white relative">
+      <section id="campus-life" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
               Collegiate Ecosystem
             </span>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+            <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
               Vibrant Campus Life
             </h2>
-            <p className="text-slate-600 text-sm md:text-base mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mt-3">
               Student activities, competitive athletics, advanced research centers, and cozy dorm rooms combine to create an outstanding university environment.
             </p>
           </div>
@@ -339,17 +339,17 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
       </section>
 
       {/* 5. TESTIMONIALS */}
-      <section id="testimonials" className="py-24 bg-slate-50 border-y border-slate-100 relative">
+      <section id="testimonials" className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/80 relative transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+          <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
             Student Perspectives
           </span>
-          <h2 className="font-sans font-bold text-3xl text-slate-900 mt-2">
+          <h2 className="font-sans font-bold text-3xl text-slate-900 dark:text-white mt-2">
             What Our Students Say
           </h2>
 
-          <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-sm relative">
-            <span className="absolute top-6 left-6 font-serif text-slate-100 text-8xl pointer-events-none select-none">
+          <div className="mt-12 bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-100 dark:border-slate-800 shadow-sm relative transition-colors duration-300">
+            <span className="absolute top-6 left-6 font-serif text-slate-100 dark:text-slate-850 text-8xl pointer-events-none select-none">
               “
             </span>
             <div className="min-h-[180px] relative z-10 flex flex-col justify-center">
@@ -362,7 +362,7 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                   transition={{ duration: 0.4 }}
                   className="space-y-6"
                 >
-                  <p className="text-slate-700 text-base md:text-lg md:leading-relaxed font-medium italic">
+                  <p className="text-slate-700 dark:text-slate-300 text-base md:text-lg md:leading-relaxed font-medium italic">
                     "{testimonials[currentTestimonial].quote}"
                   </p>
                   
@@ -373,10 +373,10 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                       className="h-14 w-14 rounded-full object-cover border-2 border-brand-500 shadow-md"
                       referrerPolicy="no-referrer"
                     />
-                    <h4 className="font-sans font-bold text-slate-900 mt-3">
+                    <h4 className="font-sans font-bold text-slate-900 dark:text-white mt-3">
                       {testimonials[currentTestimonial].name}
                     </h4>
-                    <p className="font-mono text-xs text-brand-600 mt-1 uppercase font-semibold">
+                    <p className="font-mono text-xs text-brand-600 dark:text-brand-400 mt-1 uppercase font-semibold">
                       {testimonials[currentTestimonial].role}
                     </p>
                   </div>
@@ -391,7 +391,7 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                   key={idx}
                   onClick={() => setCurrentTestimonial(idx)}
                   className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    idx === currentTestimonial ? 'w-8 bg-brand-500' : 'w-2.5 bg-slate-200 hover:bg-slate-300'
+                    idx === currentTestimonial ? 'w-8 bg-brand-500' : 'w-2.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700'
                   }`}
                   aria-label={`Go to review ${idx + 1}`}
                 />
@@ -402,21 +402,21 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
       </section>
 
       {/* 6. LATEST NEWS */}
-      <section id="latest-news" className="py-24 bg-white relative">
+      <section id="latest-news" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16">
             <div>
-              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-widest text-brand-600 dark:text-brand-400 uppercase block">
                 University Bulletins
               </span>
-              <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 mt-2">
+              <h2 className="font-sans font-bold text-3xl md:text-4xl text-slate-900 dark:text-white mt-2">
                 Latest News & Bulletins
               </h2>
             </div>
             <button
               id="all-news-btn"
               onClick={() => onPageChange('about')}
-              className="mt-4 sm:mt-0 inline-flex items-center space-x-2 text-brand-700 hover:text-brand-800 font-bold group cursor-pointer"
+              className="mt-4 sm:mt-0 inline-flex items-center space-x-2 text-brand-600 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 font-bold group cursor-pointer"
             >
               <span>View University Blog</span>
               <LucideIcon name="ArrowRight" size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -428,7 +428,7 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
               <article
                 id={`news-card-${news.id}`}
                 key={news.id}
-                className="bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden bg-slate-900">
                   <img
@@ -442,18 +442,18 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
                   </span>
                 </div>
                 <div className="p-6 space-y-3">
-                  <div className="flex items-center text-slate-400 font-mono text-[11px] space-x-2">
+                  <div className="flex items-center text-slate-400 dark:text-slate-500 font-mono text-[11px] space-x-2">
                     <LucideIcon name="Calendar" size={12} />
                     <span>{news.date}</span>
                   </div>
-                  <h3 className="font-sans font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors line-clamp-2 leading-tight">
+                  <h3 className="font-sans font-bold text-lg text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors line-clamp-2 leading-tight">
                     {news.title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed line-clamp-3">
                     {news.excerpt}
                   </p>
                   <div className="pt-2">
-                    <span className="text-sm font-semibold text-brand-700 group-hover:text-brand-800 inline-flex items-center space-x-1 cursor-pointer">
+                    <span className="text-sm font-semibold text-brand-600 dark:text-brand-400 group-hover:text-brand-800 dark:group-hover:text-brand-300 inline-flex items-center space-x-1 cursor-pointer">
                       <span>Read Full Article</span>
                       <LucideIcon name="ArrowRight" size={14} className="group-hover:translate-x-0.5 transition-transform" />
                     </span>

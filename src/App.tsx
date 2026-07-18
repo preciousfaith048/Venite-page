@@ -16,6 +16,29 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [applyModalOpen, setApplyModalOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') return saved;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+  });
+
+  // Apply dark mode class to HTML element
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   // Simulate initial loading sequence
   useEffect(() => {
@@ -51,7 +74,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 relative">
+    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 relative transition-colors duration-300">
       {/* 1. Page-to-Page and App Launch Loading Screen */}
       <AnimatePresence>
         {isLoading && <Loader />}
@@ -62,6 +85,8 @@ export default function App() {
         currentPage={currentPage}
         onPageChange={handlePageChange}
         onOpenApplyModal={() => setApplyModalOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* 3. Main Content Container with Elegant Transitions */}
