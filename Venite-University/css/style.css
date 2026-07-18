@@ -1,0 +1,371 @@
+/* 
+   Venite University Standalone Style Sheet
+   Premium University branding, custom animations, and responsive styles.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --primary-color: #1e3a8a; /* Deep Navy Blue */
+    --accent-color: #0ea5e9;  /* Sky Blue */
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-400: #94a3b8;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+    --white: #ffffff;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--slate-50);
+    color: var(--slate-900);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 1.25rem;
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.08);
+}
+
+/* Hero Section */
+.hero-wrapper {
+    position: relative;
+    min-h: 90vh;
+    background-color: var(--slate-900);
+    overflow: hidden;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Animated Floating Shapes */
+.floating-shape-1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, 0.1);
+    filter: blur(80px);
+    animation: floatShape 12s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.floating-shape-2 {
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(30, 58, 138, 0.1);
+    filter: blur(100px);
+    animation: floatShape 16s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes floatShape {
+    0% { transform: translateY(0px) rotate(0deg) scale(1); }
+    100% { transform: translateY(-40px) rotate(180deg) scale(1.1); }
+}
+
+/* Sticky Navbar */
+.university-navbar {
+    background: transparent;
+    transition: var(--transition-smooth);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.university-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.university-navbar.scrolled .nav-link {
+    color: var(--slate-700) !important;
+}
+
+.university-navbar.scrolled .nav-link:hover,
+.university-navbar.scrolled .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.university-navbar.scrolled .navbar-brand {
+    color: var(--slate-900) !important;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-smooth);
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.3);
+}
+
+/* Counters Section */
+.stat-box {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* Timeline Components */
+.timeline-container {
+    position: relative;
+    padding-left: 2.5rem;
+    border-left: 2px solid var(--slate-100);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 5px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 3px solid var(--white);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.timeline-item:hover::before {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Program Filters */
+.program-pill-btn {
+    border: 1px solid var(--slate-100);
+    background-color: var(--slate-50);
+    color: var(--slate-600);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.program-pill-btn.active,
+.program-pill-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-smooth);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Loading animation screen */
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    background-color: var(--slate-900);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--slate-800);
+    border-top: 4px solid var(--accent-color);
+    border-bottom: 4px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Interactive Accordion customization */
+.faq-accordion .accordion-item {
+    border: 1px solid var(--slate-100) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+}
+
+.faq-accordion .accordion-button {
+    font-weight: 700;
+    color: var(--slate-900);
+    padding: 1.25rem 1.5rem;
+    background-color: var(--white);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--slate-50);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+/* Map frame placeholder styling */
+.map-placeholder {
+    height: 300px;
+    border-radius: 1.25rem;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-400);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Custom visual ripple dots on map */
+.ripple-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4), 0 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(14, 165, 233, 0.4), 0 0 0 20px rgba(14, 165, 233, 0);
+    }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Venite University</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner mb-4"></div>
+        <h4 class="text-white font-monospace tracking-widest text-uppercase">VENITE UNIVERSITY</h4>
+        <p class="text-secondary text-uppercase font-monospace small">Office Connections</p>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top university-navbar" id="main-navbar">
+        <div class="container py-1">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-icon">V</div>
+                <div>
+                    <span class="d-block fw-bold lh-1 fs-5">VENITE</span>
+                    <span class="d-block font-monospace text-uppercase small text-info fs-6" style="letter-spacing: 2px;">UNIVERSITY</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-4 text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="programmes.html">Programmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary px-4 py-2.5 rounded-3 fw-bold shadow" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Hero -->
+    <section class="hero-wrapper" style="min-height: 40vh;">
+        <div class="hero-overlay" style="background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.98) 100%);"></div>
+        <div class="container hero-content text-center py-5">
+            <span class="text-info fw-bold font-monospace text-uppercase tracking-widest d-block mb-2">Office Contacts</span>
+            <h1 class="display-4 fw-extrabold text-white">Connect with Venite</h1>
+            <p class="text-secondary max-w-2xl mx-auto font-light">Get in touch with our central registration offices, faculty boards, or browse our frequently asked campus questions.</p>
+        </div>
+    </section>
+
+    <!-- Map & Details & Contact Form -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Left Details & Map -->
+                <div class="col-lg-5">
+                    <span class="text-info fw-bold tracking-widest text-uppercase d-block mb-2 font-monospace">Find Us</span>
+                    <h2 class="fw-bold text-slate-900 mb-4">University Contact Details</h2>
+                    <p class="text-secondary mb-4 leading-relaxed small">We are here to assist with any admissions requests, academic syllabus questions, or career support details. Reach out through our physical offices, telephone lines, or direct emails.</p>
+
+                    <!-- Details Card -->
+                    <div class="p-4 bg-light rounded-4 border space-y-4 mb-4">
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                            <i class="fa-solid fa-location-dot text-primary fs-5 mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Campus Address</h5>
+                                <p class="text-secondary small mb-0">100 University Drive, Academic Heights, City of Innovation, CI 40400</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                            <i class="fa-solid fa-phone-volume text-primary fs-5 mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Admissions Hotlines</h5>
+                                <p class="text-secondary small mb-0">+1 (800) 555-VENITE, +1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-start mb-3">
+                            <i class="fa-solid fa-envelope-open-text text-primary fs-5 mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Inquiries Mailbox</h5>
+                                <p class="text-secondary small mb-0">admissions@venite.edu.ng, contact@venite.edu.ng</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-start">
+                            <i class="fa-solid fa-calendar-days text-primary fs-5 mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold text-dark mb-1">Office Hours</h5>
+                                <p class="text-secondary small mb-0">Monday - Friday: 8:00 AM - 5:00 PM (GMT +1)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="map-placeholder">
+                        <div class="ripple-dot" style="top: 50%; left: 50%;"></div>
+                        <div class="relative text-center p-4">
+                            <i class="fa-solid fa-map-location-dot text-primary fs-2 mb-3"></i>
+                            <h5 class="fw-bold text-slate-800 mb-1">Interactive Campus Map</h5>
+                            <p class="text-secondary small mb-2">Venite Main Campus, Academic Heights, Block B, Main Hall</p>
+                            <a href="https://maps.google.com" target="_blank" class="text-primary small fw-bold">Open in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="col-lg-7">
+                    <div class="p-4 p-md-5 rounded-4 bg-light border">
+                        <h3 class="fw-bold text-dark mb-4">Send Direct Message</h3>
+                        
+                        <div id="form-success-alert" class="alert alert-success border-0 rounded-3 mb-4" style="display: none;">
+                            <h5 class="fw-bold"><i class="fa-solid fa-circle-check me-2"></i>Message Dispatched!</h5>
+                            <p class="small mb-0 mt-2">Thank you for contacting Venite University. Our admissions coordinator has logged your inquiry and will respond to your mailbox within 24 working hours.</p>
+                        </div>
+
+                        <form id="inquiry-form">
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Full Name</label>
+                                    <input type="text" id="contact-name" class="form-control py-2.5 bg-white rounded-3" placeholder="Jane Austin">
+                                    <div id="name-error" class="text-danger small mt-1" style="display: none;"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Email Address</label>
+                                    <input type="email" id="contact-email" class="form-control py-2.5 bg-white rounded-3" placeholder="jane@example.com">
+                                    <div id="email-error" class="text-danger small mt-1" style="display: none;"></div>
+                                </div>
+                            </div>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Phone Number</label>
+                                    <input type="tel" id="contact-phone" class="form-control py-2.5 bg-white rounded-3" placeholder="+1 (555) 987-6543">
+                                    <div id="phone-error" class="text-danger small mt-1" style="display: none;"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Subject Matter</label>
+                                    <input type="text" id="contact-subject" class="form-control py-2.5 bg-white rounded-3" placeholder="e.g. Scholarship Inquiry">
+                                    <div id="subject-error" class="text-danger small mt-1" style="display: none;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold small text-secondary">Message Body</label>
+                                <textarea id="contact-message" rows="4" class="form-control bg-white rounded-3" placeholder="Type your inquiry in detail..."></textarea>
+                                <div id="message-error" class="text-danger small mt-1" style="display: none;"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary text-white w-100 py-3 rounded-3 fw-bold">Send Official Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="py-5 bg-light border-top border-bottom">
+        <div class="container py-5">
+            <div class="text-center max-w-2xl mx-auto mb-5">
+                <span class="text-info fw-bold tracking-widest text-uppercase d-block mb-2 font-monospace">Direct Answers</span>
+                <h2 class="fw-bold text-slate-900 h1">Frequently Asked Questions</h2>
+                <p class="text-secondary">Browse our standardized collegiate FAQs. If you do not locate your query, submit the direct form above.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I apply for admission to Venite University?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-white text-secondary small">
+                                    You can apply easily by clicking any of the "Apply Now" buttons across our website. This will direct you to our central admissions form where you can submit academic credentials, personal statements, and pay the basic application processing fee. Applications are processed on a rolling basis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What are the scholarship opportunities available?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-white text-secondary small">
+                                    Venite University awards over $5 million in academic scholarships annually. These include: Academic Excellence Scholarships (covering 100% tuition for students in top 3% percentile), Athletic Merit Scholarships, and Need-Based Grants. Applications for scholarships open immediately after receiving an admission offer.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Are there on-campus accommodation facilities?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-white text-secondary small">
+                                    Yes! We have state-of-the-art residential halls with single and shared occupancy setups. All hostels are highly secure with 24/7 security guard patrols, biometric access systems, continuous electrical grid back-ups, study libraries, laundry facilities, and common dining halls serving gourmet meals.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What is the student-to-lecturer ratio at the university?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-white text-secondary small">
+                                    We maintain an impressive average student-to-lecturer ratio of 15:1. This guarantees that every student receives dedicated support, personalized career guidance, and academic mentorship directly from our 500+ world-class doctoral and professional lecturers.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Does the university offer career placement support?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body bg-white text-secondary small">
+                                    Absolutely. Our career services center partners with over 300+ leading global corporations (Google, McKinsey, Pfizer, etc.). We organize bi-annual career expos, mock interviews, and resume-building workshops. Over 95% of our graduates secure full-time, high-paying jobs within 6 months of graduation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-secondary pt-5 pb-4 border-top border-dark">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-white mb-4 d-inline-flex" href="index.html">
+                        <div class="brand-icon">V</div>
+                        <div>
+                            <span class="d-block fw-bold lh-1 fs-5">VENITE</span>
+                            <span class="d-block font-monospace text-uppercase small text-info fs-6" style="letter-spacing: 2px;">UNIVERSITY</span>
+                        </div>
+                    </a>
+                    <p class="small text-muted mt-3">Venite University is dedicated to fostering global leaders, breakthrough scientific research, and academic excellence in an inclusive environment.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-secondary hover:text-white"><i class="fa-brands fa-facebook fs-5"></i></a>
+                        <a href="#" class="text-secondary hover:text-white"><i class="fa-brands fa-instagram fs-5"></i></a>
+                        <a href="#" class="text-secondary hover:text-white"><i class="fa-brands fa-linkedin fs-5"></i></a>
+                        <a href="#" class="text-secondary hover:text-white"><i class="fa-brands fa-twitter fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled small space-y-3">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none hover:text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="programmes.html" class="text-secondary text-decoration-none hover:text-white">Programmes</a></li>
+                        <li><a href="contact.html" class="text-secondary text-decoration-none hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5 class="text-white fw-bold mb-4">Faculties</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2 text-muted">Faculty of Medicine</li>
+                        <li class="mb-2 text-muted">Faculty of Engineering</li>
+                        <li class="mb-2 text-muted">Faculty of Computing</li>
+                        <li class="text-muted">Faculty of Business & Law</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="text-white fw-bold mb-4">Admissions Newsletter</h5>
+                    <p class="small text-muted mb-3">Join to receive updates about scholarships and seasonal admissions guides.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-0 text-white" placeholder="email@example.edu">
+                        <button class="btn btn-info text-white" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-dark my-5">
+            <div class="d-flex flex-column flex-sm-row justify-content-between text-muted small">
+                <p>&copy; 2026 Venite University. All Rights Reserved.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Apply Now Bootstrap 5 Modal -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header bg-dark text-white p-4">
+                    <div>
+                        <span class="font-monospace text-uppercase small text-info">Admissions Portal</span>
+                        <h4 class="modal-title fw-bold mt-1" id="applyModalLabel">Apply for Admission</h4>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5">
+                    <div id="modal-form-body">
+                        <form id="admissions-modal-form">
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">First Name</label>
+                                    <input type="text" id="modal-first-name" class="form-control py-2.5 rounded-3" placeholder="John" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Last Name</label>
+                                    <input type="text" id="modal-last-name" class="form-control py-2.5 rounded-3" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Email Address</label>
+                                    <input type="email" id="modal-email" class="form-control py-2.5 rounded-3" placeholder="john@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small text-secondary">Phone Number</label>
+                                    <input type="tel" id="modal-phone" class="form-control py-2.5 rounded-3" placeholder="+1 (555) 012-3456" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold small text-secondary">Desired Programme</label>
+                                <select id="modal-program" class="form-select py-2.5 rounded-3" required>
+                                    <option value="" disabled selected>-- Choose a Programme --</option>
+                                    <option value="cs">B.Sc. Computer Science (4 Years)</option>
+                                    <option value="nurs">B.Sc. Nursing (5 Years)</option>
+                                    <option value="med">MBBS Medicine & Surgery (6 Years)</option>
+                                    <option value="biz">B.Sc. Accounting (4 Years)</option>
+                                    <option value="law">LL.B Law (5 Years)</option>
+                                    <option value="mba">Executive MBA (1.5 Years)</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold small text-secondary">Previous GPA (Out of 5.0)</label>
+                                <input type="number" step="0.01" id="modal-gpa" class="form-control py-2.5 rounded-3" placeholder="e.g. 4.25" required>
+                            </div>
+                            <button type="submit" class="btn btn-info text-white w-full py-3 rounded-3 fw-bold mt-2">Submit Official Application</button>
+                        </form>
+                    </div>
+                    <div id="modal-success-body" style="display: none;" class="text-center py-5">
+                        <i class="fa-solid fa-circle-check text-success display-3 mb-4"></i>
+                        <h3 class="fw-bold text-dark">Application Logged!</h3>
+                        <p class="text-secondary max-w-md mx-auto mt-3">Thank you, <strong id="modal-user-name" class="text-primary"></strong>. Your academic admission files have been logged. Check your mailbox for the official evaluation letter.</p>
+                        <button class="btn btn-secondary px-5 py-2.5 rounded-3 mt-4" data-bs-dismiss="modal">Close Portal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Venite University",
+  "description": "A modern, fully responsive premium university landing website featuring elegant animations, academic program dashboards, and an admissions portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
