@@ -51,3 +51,13 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  date: string;
+  category: 'academic' | 'exams' | 'admissions' | 'holidays';
+  semester: 'fall' | 'spring' | 'summer';
+  description: string;
+}
+

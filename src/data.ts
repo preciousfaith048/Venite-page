@@ -1,4 +1,4 @@
-import { Faculty, Stat, TimelineStep, Programme, Testimonial, NewsArticle, FAQItem } from './types';
+import { Faculty, Stat, TimelineStep, Programme, Testimonial, NewsArticle, FAQItem, CalendarEvent } from './types';
 
 export const stats: Stat[] = [
   { id: 'students', value: 15000, suffix: '+', label: 'Enrolled Students' },
@@ -362,3 +362,172 @@ export const contactDetails = {
     { name: 'YouTube', url: '#', icon: 'Youtube' }
   ]
 };
+
+export const calendarEvents: CalendarEvent[] = [
+  // Fall Semester 2026
+  {
+    id: 'f26-1',
+    title: 'Fall Semester Resumption & Online Registration',
+    date: 'September 1, 2026',
+    category: 'admissions',
+    semester: 'fall',
+    description: 'Portal opens for new and returning undergraduate & postgraduate students to complete course registration and tuition payment.'
+  },
+  {
+    id: 'f26-2',
+    title: 'Freshmen Orientation Week',
+    date: 'September 7 - 11, 2026',
+    category: 'academic',
+    semester: 'fall',
+    description: 'A dedicated welcoming week introducing first-year students to faculties, campus facilities, research resources, and peer groups.'
+  },
+  {
+    id: 'f26-3',
+    title: 'Commencement of Fall Lectures',
+    date: 'September 14, 2026',
+    category: 'academic',
+    semester: 'fall',
+    description: 'Official academic lectures begin across all undergraduate faculties and postgraduate schools.'
+  },
+  {
+    id: 'f26-4',
+    title: 'Independence Day Holiday',
+    date: 'October 1, 2026',
+    category: 'holidays',
+    semester: 'fall',
+    description: 'National holiday. No lectures will hold, and administrative offices remain closed.'
+  },
+  {
+    id: 'f26-5',
+    title: 'Fall Mid-Semester Continuous Assessments',
+    date: 'October 26 - 30, 2026',
+    category: 'exams',
+    semester: 'fall',
+    description: 'Mid-term evaluation exams, quizzes, and project review assessments for all departments.'
+  },
+  {
+    id: 'f26-6',
+    title: 'Thanksgiving Collegiate Break',
+    date: 'November 26 - 27, 2026',
+    category: 'holidays',
+    semester: 'fall',
+    description: 'Collegiate recess. Students are permitted to travel, and library hours are scaled back.'
+  },
+  {
+    id: 'f26-7',
+    title: 'Fall Semester Final Examinations',
+    date: 'December 14 - 18, 2026',
+    category: 'exams',
+    semester: 'fall',
+    description: 'Compulsory semester-end examinations for all registered courses.'
+  },
+  {
+    id: 'f26-8',
+    title: 'Christmas & New Year Inter-Semester Recess',
+    date: 'December 21, 2026 - January 8, 2027',
+    category: 'holidays',
+    semester: 'fall',
+    description: 'End-of-year holidays. Portals remain open for early spring registrations.'
+  },
+
+  // Spring Semester 2027
+  {
+    id: 's27-1',
+    title: 'Spring Semester Resumption & Registration',
+    date: 'January 11, 2027',
+    category: 'admissions',
+    semester: 'spring',
+    description: 'Online registration for Spring Semester courses begins. Faculty advisors are available for consulting.'
+  },
+  {
+    id: 's27-2',
+    title: 'Commencement of Spring Lectures',
+    date: 'January 18, 2027',
+    category: 'academic',
+    semester: 'spring',
+    description: 'Formal spring semester lectures commence across all faculties.'
+  },
+  {
+    id: 's27-3',
+    title: 'Venite Founder’s Day Celebration',
+    date: 'February 15, 2027',
+    category: 'academic',
+    semester: 'spring',
+    description: 'Annual celebratory symposium highlighting university history, honorary guest awards, and research expos.'
+  },
+  {
+    id: 's27-4',
+    title: 'Spring Mid-Semester Assessment Week',
+    date: 'March 8 - 12, 2027',
+    category: 'exams',
+    semester: 'spring',
+    description: 'Mid-term written tests, clinical assessments, and laboratory evaluations.'
+  },
+  {
+    id: 's27-5',
+    title: 'Good Friday & Easter Recess',
+    date: 'April 9 - 13, 2027',
+    category: 'holidays',
+    semester: 'spring',
+    description: 'Easter holiday recess. Lectures resume on April 14.'
+  },
+  {
+    id: 's27-6',
+    title: 'Spring Semester Final Examinations',
+    date: 'May 10 - 14, 2027',
+    category: 'exams',
+    semester: 'spring',
+    description: 'Semester-ending comprehensive examinations.'
+  },
+  {
+    id: 's27-7',
+    title: '15th Annual Convocation & Graduation Ceremony',
+    date: 'May 22, 2027',
+    category: 'academic',
+    semester: 'spring',
+    description: 'Commencement and conferral of degrees on all graduating classes at the Grand Assembly Field.'
+  },
+
+  // Summer Session 2027
+  {
+    id: 'su27-1',
+    title: 'Summer Term Registration',
+    date: 'June 1, 2027',
+    category: 'admissions',
+    semester: 'summer',
+    description: 'Optional accelerated summer term enrolment opens for catch-up or early graduation streams.'
+  },
+  {
+    id: 'su27-2',
+    title: 'Commencement of Summer Lectures',
+    date: 'June 7, 2027',
+    category: 'academic',
+    semester: 'summer',
+    description: 'High-intensity lectures and lab projects begin.'
+  },
+  {
+    id: 'su27-3',
+    title: 'Summer Mid-Course Evaluations',
+    date: 'July 5, 2027',
+    category: 'exams',
+    semester: 'summer',
+    description: 'Mid-term check-in quizzes and research abstract defenses.'
+  },
+  {
+    id: 'su27-4',
+    title: 'End of Summer Term Presentations',
+    date: 'July 30, 2027',
+    category: 'academic',
+    semester: 'summer',
+    description: 'Capstone project exhibitions, oral presentations, and course wraps.'
+  },
+  {
+    id: 'su27-5',
+    title: 'Summer Term Final Exams',
+    date: 'August 2 - 4, 2027',
+    category: 'exams',
+    semester: 'summer',
+    description: 'Compulsory term exams. Transition phase before the next academic year begins.'
+  }
+];
+

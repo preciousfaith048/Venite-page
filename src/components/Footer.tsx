@@ -102,6 +102,15 @@ export default function Footer({ onPageChange, onOpenApplyModal }: FooterProps) 
             </li>
             <li>
               <button
+                id="footer-link-calendar"
+                onClick={() => onPageChange('calendar')}
+                className="hover:text-white transition-colors cursor-pointer text-slate-400 text-left"
+              >
+                Academic Calendar
+              </button>
+            </li>
+            <li>
+              <button
                 id="footer-link-contact"
                 onClick={() => onPageChange('contact')}
                 className="hover:text-white transition-colors cursor-pointer text-slate-400 text-left"

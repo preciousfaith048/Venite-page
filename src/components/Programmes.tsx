@@ -5,11 +5,12 @@ import { programmes } from '../data';
 
 interface ProgrammesProps {
   onOpenApplyModal: () => void;
+  onPageChange: (page: string) => void;
 }
 
 type ProgramTab = 'all' | 'undergraduate' | 'postgraduate' | 'certification';
 
-export default function Programmes({ onOpenApplyModal }: ProgrammesProps) {
+export default function Programmes({ onOpenApplyModal, onPageChange }: ProgrammesProps) {
   const [activeTab, setActiveTab] = useState<ProgramTab>('all');
 
   const filteredProgrammes = activeTab === 'all'
@@ -292,6 +293,34 @@ export default function Programmes({ onOpenApplyModal }: ProgrammesProps) {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ACADEMIC CALENDAR DIRECT LINK */}
+      <section id="programmes-academic-calendar" className="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 relative transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-brand-900 text-white rounded-3xl p-8 md:p-12 shadow-lg relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:16px_16px] pointer-events-none" />
+            <div className="space-y-4 max-w-2xl text-center md:text-left relative z-10">
+              <span className="font-mono text-xs font-semibold tracking-widest text-brand-300 uppercase block">
+                Stay on Schedule
+              </span>
+              <h2 className="font-sans font-bold text-2xl md:text-4xl tracking-tight leading-tight">
+                Align Your Studies with the Academic Calendar
+              </h2>
+              <p className="text-brand-100 text-sm leading-relaxed max-w-xl">
+                Ready to review key timelines for admission openings, course registrations, mid-terms, and exams? Explore the full active academic timeline.
+              </p>
+            </div>
+            <button
+              id="programmes-view-calendar-btn"
+              onClick={() => onPageChange('calendar')}
+              className="relative z-10 px-6 py-3.5 bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-2xl text-sm flex items-center justify-center space-x-2.5 transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0 cursor-pointer w-full md:w-auto"
+            >
+              <LucideIcon name="Calendar" size={16} className="text-brand-600" />
+              <span>Explore Academic Calendar</span>
+            </button>
           </div>
         </div>
       </section>

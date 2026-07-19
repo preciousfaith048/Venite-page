@@ -465,6 +465,36 @@ export default function Home({ onPageChange, onOpenApplyModal }: HomeProps) {
         </div>
       </section>
 
+      {/* ACADEMIC CALENDAR PROMOTION */}
+      <section id="home-academic-calendar" className="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-850 relative overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-gradient-to-r from-brand-900 to-indigo-900 rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:20px_20px] pointer-events-none" />
+            <div className="relative z-10 max-w-2xl space-y-4 text-center md:text-left">
+              <span className="font-mono text-xs font-semibold tracking-widest text-brand-300 uppercase">
+                Collegiate Timelines
+              </span>
+              <h2 className="font-sans font-bold text-2xl md:text-4xl tracking-tight text-white leading-tight">
+                Academic Calendar 2026/2027
+              </h2>
+              <p className="text-brand-100 text-sm leading-relaxed max-w-xl">
+                Stay updated on registration deadlines, exam schedules, resumption dates, and holiday recesses. Never miss an important scholastic milestone.
+              </p>
+            </div>
+            <div className="relative z-10 shrink-0">
+              <button
+                id="home-view-calendar-btn"
+                onClick={() => onPageChange('calendar')}
+                className="px-6 py-3.5 bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-2xl text-sm flex items-center justify-center space-x-2.5 transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0 cursor-pointer w-full sm:w-auto"
+              >
+                <LucideIcon name="Calendar" size={16} className="text-brand-600" />
+                <span>Open Academic Calendar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 7. CALL TO ACTION */}
       <section id="home-cta" className="py-20 bg-slate-950 relative overflow-hidden">
         {/* Abstract vector backgrounds */}

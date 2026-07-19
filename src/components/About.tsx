@@ -2,7 +2,11 @@ import { motion } from 'motion/react';
 import LucideIcon from './LucideIcon';
 import { timelineSteps } from '../data';
 
-export default function About() {
+interface AboutProps {
+  onPageChange: (page: string) => void;
+}
+
+export default function About({ onPageChange }: AboutProps) {
   return (
     <div className="relative pt-24">
       {/* 1. HEADER HERO */}
@@ -200,6 +204,35 @@ export default function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ACADEMIC CALENDAR BANNER */}
+      <section id="about-academic-calendar" className="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 relative transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-8 md:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-start space-x-4">
+              <div className="h-12 w-12 rounded-xl bg-brand-50 dark:bg-brand-950/40 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
+                <LucideIcon name="Calendar" size={24} />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-sans font-bold text-slate-900 dark:text-white text-lg md:text-xl">
+                  Venite Academic Blueprint
+                </h3>
+                <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed max-w-xl">
+                  Planning your schedule? View the full calendar of lectures, registration sessions, exams, and official university holidays.
+                </p>
+              </div>
+            </div>
+            <button
+              id="about-view-calendar-btn"
+              onClick={() => onPageChange('calendar')}
+              className="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl text-xs transition-all flex items-center space-x-2 shrink-0 cursor-pointer shadow-sm hover:-translate-y-0.5 active:translate-y-0 w-full md:w-auto justify-center"
+            >
+              <span>View Academic Calendar</span>
+              <LucideIcon name="ArrowRight" size={14} />
+            </button>
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Programmes from './components/Programmes';
 import Contact from './components/Contact';
+import Calendar from './components/Calendar';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
@@ -63,11 +64,13 @@ export default function App() {
       case 'home':
         return <Home onPageChange={handlePageChange} onOpenApplyModal={() => setApplyModalOpen(true)} />;
       case 'about':
-        return <About />;
+        return <About onPageChange={handlePageChange} />;
       case 'programmes':
-        return <Programmes onOpenApplyModal={() => setApplyModalOpen(true)} />;
+        return <Programmes onPageChange={handlePageChange} onOpenApplyModal={() => setApplyModalOpen(true)} />;
+      case 'calendar':
+        return <Calendar />;
       case 'contact':
-        return <Contact />;
+        return <Contact onPageChange={handlePageChange} />;
       default:
         return <Home onPageChange={handlePageChange} onOpenApplyModal={() => setApplyModalOpen(true)} />;
     }
